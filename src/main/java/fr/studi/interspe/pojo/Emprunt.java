@@ -23,10 +23,10 @@ public class Emprunt {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "adherent_id")
-    private Adherent adherent;
+    private Adherents adherents;
 
     private LocalDate dateEmprunt;
     private LocalDate dateRetour;
-    private Status statut;
+    private BookState statut;
 
 }
