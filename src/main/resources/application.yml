@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://mysql-bauwens.alwaysdata.net/bauwens_interspe_bdd
+    password: k5RKgdELVPSQ6S
+    username: bauwens_interspe
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
