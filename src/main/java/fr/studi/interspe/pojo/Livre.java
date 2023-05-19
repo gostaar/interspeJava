@@ -12,7 +12,7 @@ public class Livre {
 
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long livre_id;
     private String isbn;
     private String titre;
     private String description;

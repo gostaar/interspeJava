@@ -10,7 +10,7 @@ public interface BookService {
 
     List<Livre> getAllBooksByState(Status status);
 
-    List<Livre> getAllLivres();
-
     Livre getLivreById(Long id);
+
+    List<Livre> getAllLivres();
 }

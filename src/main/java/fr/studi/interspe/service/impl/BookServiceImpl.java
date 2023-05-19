@@ -5,7 +5,6 @@ import fr.studi.interspe.pojo.Status;
 import fr.studi.interspe.repository.BookRepository;
 import fr.studi.interspe.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -41,4 +40,5 @@ public class BookServiceImpl implements BookService {
     public Livre getLivreById(Long id) {
         return bookRepository.findById(id).orElse(null);
     }
+
 }

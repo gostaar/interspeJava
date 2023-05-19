@@ -27,6 +27,6 @@ public class Emprunt {
 
     private LocalDate dateEmprunt;
     private LocalDate dateRetour;
-    private BookState statut;
+    private Status statut;
 
 }

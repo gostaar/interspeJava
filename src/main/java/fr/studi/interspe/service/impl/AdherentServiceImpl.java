@@ -15,12 +15,12 @@ public class AdherentServiceImpl implements AdherentService {
     private AdherentRepository adherentRepository;
 
     @Override
-    public List<Adherent> getAllAdherent() {
+    public List<Adherents> getAllAdherent() {
         return adherentRepository.findAllAdherent();
     }
 
     @Override
-    public Adherent getAdherentById(Long id) {
+    public Adherents getAdherentById(Long id) {
         return adherentRepository.findById(id).orElse(null);
     }
 
@@ -30,24 +30,24 @@ public class AdherentServiceImpl implements AdherentService {
     }
 
     @Override
-    public void updateAdherentById(Adherent adherent, Long id) {
+    public void updateAdherentById(Adherents adherents, Long id) {
         // un enregistement est immuable
         // impossible à modifier
         // de ce fait, on doit recuperer l'element, le modifier
         // le remettre
-        Adherent oldAdherent = getAdherentById(id);
+        Adherents oldAdherents = getAdherentById(id);
 
-        if(oldAdherent != null){
-            oldAdherent.setNom(adherent.getNom());
-            oldAdherent.setPrenom(adherent.getPrenom());
-            oldAdherent.setEmail(adherent.getEmail());
-            oldAdherent.setCaution(adherent.getCaution());
-            adherentRepository.save(oldAdherent);
+        if(oldAdherents != null){
+            oldAdherents.setNom(adherents.getNom());
+            oldAdherents.setPrenom(adherents.getPrenom());
+            oldAdherents.setEmail(adherents.getEmail());
+            oldAdherents.setCaution(adherents.getCaution());
+            adherentRepository.save(oldAdherents);
         }
     }
 
     @Override
-    public void createAdherent(Adherent adherent) {
-        adherentRepository.save(adherent);
+    public void createAdherent(Adherents adherents) {
+        adherentRepository.save(adherents);
     }
 }

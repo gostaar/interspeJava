@@ -5,13 +5,13 @@ import fr.studi.interspe.pojo.*;
 import java.util.List;
 
 public interface AdherentService {
-    List<Adherent> getAllAdherent();
+    List<Adherents> getAllAdherent();
 
-    Adherent getAdherentById(Long id);
+    Adherents getAdherentById(Long id);
 
     void deleteAdherentById(Long id);
 
-    void updateAdherentById(Adherent adherent, Long id);
+    void updateAdherentById(Adherents adherents, Long id);
 
-    void createAdherent(Adherent adherent);
+    void createAdherent(Adherents adherents);
 }

@@ -19,24 +19,24 @@ public class AdherentsWs {
     private AdherentService adherentService;
 
     @GetMapping
-    public List<Adherent> getAllAdherent(){
+    public List<Adherents> getAllAdherent(){
         return null;
     }
 
     @GetMapping("{id}")
-    public Adherent getAdherentById(@PathVariable("id") Long id){
+    public Adherents getAdherentById(@PathVariable("id") Long id){
         return null;
     }
 
     @PostMapping
-    public void createAdherent(@RequestBody Adherent adherent){
-        adherentService.createAdherent(adherent);
+    public void createAdherent(@RequestBody Adherents adherents){
+        adherentService.createAdherent(adherents);
     }
 
     @PutMapping("{id}")
-    public void updateAdherentById(@RequestBody Adherent adherent,
+    public void updateAdherentById(@RequestBody Adherents adherents,
                                    @PathVariable Long id){
-        adherentService.updateAdherentById(adherent,id);
+        adherentService.updateAdherentById(adherents,id);
     }
 
     @DeleteMapping("{id}")

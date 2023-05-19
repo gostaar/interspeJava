@@ -5,7 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 @Getter
@@ -13,7 +12,7 @@ import lombok.Setter;
 @Entity
 
 
-public class Adherent {
+public class Adherents {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +24,7 @@ public class Adherent {
     private String email;
     private Boolean caution;
 
-    public Adherent(String nom, String prenom, String telephone, String email, Boolean caution) {
+    public Adherents(String nom, String prenom, String telephone, String email, Boolean caution) {
         this.nom = nom;
         this.prenom = prenom;
         this.telephone = telephone;
@@ -33,7 +32,7 @@ public class Adherent {
         this.caution = caution;
     }
 
-    public Adherent() {
+    public Adherents() {
 
     }
 
